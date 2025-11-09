@@ -1,0 +1,80 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff8f9;
+  color: #444;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ffe6ec, #fffaf3);
+  border-bottom: 2px solid #ffd6dc;
+}
+
+h1 {
+  color: #d47fa6;
+}
+
+p {
+  color: #555;
+}
+
+.zoe-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  border: 4px solid #f7c7d3;
+  object-fit: cover;
+}
+
+.link-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.link-card {
+  background: #fff;
+  border: 2px solid #ffd6dc;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  width: 80%;
+  max-width: 350px;
+  text-decoration: none;
+  color: #d47fa6;
+  transition: 0.2s ease;
+}
+
+.link-card:hover {
+  background: #ffeef2;
+  transform: translateY(-4px);
+}
+
+.wishlist {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+.wishlist li {
+  background: #fff;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ffd6dc;
+}
+
+footer {
+  margin: 2rem 0;
+  color: #aaa;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d47fa6;
+}
