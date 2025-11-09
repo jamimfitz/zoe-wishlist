@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zoe’s Birthday & Christmas Wishlist</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe’s Gift Wishlists</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🎀 Zoe’s Gift Wishlists 🎁</h1>
-    <p>Welcome to Zoe’s little corner of joy — filled with love, giggles, and gift ideas for her special days!</p>
-    <img src="images/zoe-photo.jpg" alt="Photo of Zoe" class="zoe-photo">
-  </header>
 
-  <main class="link-section">
-    <a href="birthday.html" class="link-card">
-      <h2>🎂 Birthday Wishlist</h2>
-      <p>Sweet surprises for Zoe’s special day!</p>
-    </a>
+<!-- Floating shapes -->
+<div class="shape star" style="top: 10%; left: 15%; width: 25px; height: 25px;"></div>
+<div class="shape heart" style="top: 40%; left: 80%; width: 20px; height: 20px;"></div>
+<div class="shape flower" style="top: 70%; left: 30%; width: 30px; height: 30px;"></div>
+<div class="shape star" style="top: 25%; left: 60%; width: 15px; height: 15px;"></div>
+<div class="shape heart" style="top: 60%; left: 10%; width: 20px; height: 20px;"></div>
 
-    <a href="christmas.html" class="link-card">
-      <h2>🎄 Christmas Wishlist</h2>
-      <p>Magical gifts to make her holiday sparkle!</p>
-    </a>
-  </main>
+<header class="site-header">
+  <img src="images/zoe-photo.jpg" alt="Zoe Photo" class="portrait">
+  <h1>Zoe’s Gift Wishlists</h1>
+  <p class="intro">Sweet and thoughtful ideas for her Birthday & Christmas — curated for family & friends.</p>
+</header>
 
-  <footer>
-    <p>Made with love for Zoe 💖</p>
-  </footer>
+<main class="cards">
+  <a href="birthday.html" class="card">
+    <h2>Birthday Wishlist</h2>
+    <p>Lovely ideas to celebrate Zoe’s special day.</p>
+    <span class="btn">See Birthday Gifts</span>
+  </a>
+  <a href="christmas.html" class="card">
+    <h2>Christmas Wishlist</h2>
+    <p>Festive treasures for Zoe’s holiday joy.</p>
+    <span class="btn">See Christmas Gifts</span>
+  </a>
+</main>
+
+<footer class="site-footer">
+  <p>With all our love for little Zoe</p>
+</footer>
+
 </body>
 </html>
