@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zoe’s Birthday Wishlist</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe’s Birthday Wishlist</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <img src="images/zoe-photo.jpg" alt="Photo of Zoe" class="portrait">
-    <h1>Zoe’s Birthday Wishlist</h1>
-    <p class="intro">A curated list of gifts that will make Zoe’s birthday extra special. Thoughtful ideas for family and friends.</p>
-  </header>
 
-  <main class="cards">
-    <!-- Example gift items, replace links later -->
-    <div class="card">
-      <h2>Gift Idea 1</h2>
-      <p>A cute and fun birthday gift Zoe will love.</p>
-      <span class="btn">View Item</span>
-    </div>
+<!-- Floating shapes -->
+<div class="shape star" style="top: 10%; left: 15%; width: 25px; height: 25px;"></div>
+<div class="shape heart" style="top: 40%; left: 80%; width: 20px; height: 20px;"></div>
+<div class="shape flower" style="top: 70%; left: 30%; width: 30px; height: 30px;"></div>
 
-    <div class="card">
-      <h2>Gift Idea 2</h2>
-      <p>Something cozy and playful for Zoe’s special day.</p>
-      <span class="btn">View Item</span>
-    </div>
+<header class="site-header">
+  <h1>Zoe’s Birthday Wishlist</h1>
+  <p>Birthday: February 12th</p>
+  <p>Shipping Address: 5916 Olinger Blvd, Minneapolis, MN 55436</p>
+</header>
 
-    <div class="card">
-      <h2>Gift Idea 3</h2>
-      <p>Perfect for making Zoe’s birthday unforgettable.</p>
-      <span class="btn">View Item</span>
-    </div>
-  </main>
+<main class="cards">
 
-  <footer class="site-footer">
-    <p>With all our love for little Zoe 💕</p>
-  </footer>
+  <div class="card">
+    <h2>Teddy Bear</h2>
+    <p>Soft and cuddly for Zoe’s playtime.</p>
+    <label><input type="checkbox" class="gift-check"> Mark as purchased</label><br><br>
+    <label>
+      Send to: 
+      <select class="gift-send">
+        <option value="our-house">Our house (5916 Olinger Blvd)</option>
+        <option value="their-house">My house (wrap & send myself)</option>
+      </select>
+    </label><br><br>
+    <a href="#" class="btn">View Gift</a>
+  </div>
+  
+  <div class="card">
+    <h2>Storybook</h2>
+    <p>Colorful pages to read together.</p>
+    <label><input type="checkbox" class="gift-check"> Mark as purchased</label><br><br>
+    <label>
+      Send to: 
+      <select class="gift-send">
+        <option value="our-house">Our house (5916 Olinger Blvd)</option>
+        <option value="their-house">My house (wrap & send myself)</option>
+      </select>
+    </label><br><br>
+    <a href="#" class="btn">View Gift</a>
+  </div>
+  
+  <div class="card">
+    <h2>Baby Doll</h2>
+    <p>Adorable doll for Zoe to hug and play with.</p>
+    <label><input type="checkbox" class="gift-check"> Mark as purchased</label><br><br>
+    <label>
+      Send to: 
+      <select class="gift-send">
+        <option value="our-house">Our house (5916 Olinger Blvd)</option>
+        <option value="their-house">My house (wrap & send myself)</option>
+      </select>
+    </label><br><br>
+    <a href="#" class="btn">View Gift</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>With love for Zoe</p>
+</footer>
+
+<script>
+  // Optional: simple local storage for purchased checkboxes
+  const checkboxes = document.querySelectorAll('.gift-check');
+  checkboxes.forEach((box, index) => {
+    // Load saved state
+    if(localStorage.getItem('gift' + index) === 'true') box.checked = true;
+    box.addEventListener('change', () => {
+      localStorage.setItem('gift' + index, box.checked);
+    });
+  });
+</script>
+
 </body>
 </html>
