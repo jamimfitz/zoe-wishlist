@@ -1,42 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zoe’s Christmas Wishlist</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe’s Christmas Wishlist</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <img src="images/zoe-photo.jpg" alt="Photo of Zoe" class="portrait">
-    <h1>Zoe’s Christmas Wishlist</h1>
-    <p class="intro">Festive treasures and thoughtful gifts to make Zoe’s holiday season magical.</p>
-  </header>
 
-  <main class="cards">
-    <!-- Example gift items, replace links later -->
-    <div class="card">
-      <h2>Gift Idea 1</h2>
-      <p>A fun holiday gift Zoe will adore.</p>
-      <span class="btn">View Item</span>
-    </div>
+<!-- Floating shapes -->
+<div class="shape star" style="top: 15%; left: 20%; width: 25px; height: 25px;"></div>
+<div class="shape heart" style="top: 45%; left: 70%; width: 20px; height: 20px;"></div>
+<div class="shape flower" style="top: 65%; left: 40%; width: 30px; height: 30px;"></div>
 
-    <div class="card">
-      <h2>Gift Idea 2</h2>
-      <p>Cozy and festive — perfect for the holidays.</p>
-      <span class="btn">View Item</span>
-    </div>
+<header class="site-header">
+  <h1>Zoe’s Christmas Wishlist</h1>
+  <p>Shipping Address: 5916 Olinger Blvd, Minneapolis, MN 55436</p>
+</header>
 
-    <div class="card">
-      <h2>Gift Idea 3</h2>
-      <p>Something magical to bring joy to Zoe’s Christmas morning.</p>
-      <span class="btn">View Item</span>
-    </div>
-  </main>
+<main class="cards">
 
-  <footer class="site-footer">
-    <p>With all our love for little Zoe 💕</p>
-  </footer>
+  <div class="card">
+    <h2>Christmas Dress</h2>
+    <p>Festive outfit for holiday celebrations.</p>
+    <label><input type="checkbox" class="gift-check"> Mark as purchased</label><br><br>
+    <label>
+      Send to: 
+      <select class="gift-send">
+        <option value="our-house">Our house (5916 Olinger Blvd)</option>
+        <option value="their-house">My house (wrap & send myself)</option>
+      </select>
+    </label><br><br>
+    <a href="#" class="btn">View Gift</a>
+  </div>
+  
+  <div class="card">
+    <h2>Plush Reindeer</h2>
+    <p>Cute plush toy to cuddle by the fireplace.</p>
+    <label><input type="checkbox" class="gift-check"> Mark as purchased</label><br><br>
+    <label>
+      Send to: 
+      <select class="gift-send">
+        <option value="our-house">Our house (5916 Olinger Blvd)</option>
+        <option value="their-house">My house (wrap & send myself)</option>
+      </select>
+    </label><br><br>
+    <a href="#" class="btn">View Gift</a>
+  </div>
+  
+  <div class="card">
+    <h2>Musical Toy</h2>
+    <p>Fun sounds and songs for Zoe to enjoy.</p>
+    <label><input type="checkbox" class="gift-check"> Mark as purchased</label><br><br>
+    <label>
+      Send to: 
+      <select class="gift-send">
+        <option value="our-house">Our house (5916 Olinger Blvd)</option>
+        <option value="their-house">My house (wrap & send myself)</option>
+      </select>
+    </label><br><br>
+    <a href="#" class="btn">View Gift</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p>With love for Zoe</p>
+</footer>
+
+<script>
+  // Optional: remember purchased gifts locally
+  const checkboxes = document.querySelectorAll('.gift-check');
+  checkboxes.forEach((box, index) => {
+    if(localStorage.getItem('giftXmas' + index) === 'true') box.checked = true;
+    box.addEventListener('change', () => {
+      localStorage.setItem('giftXmas' + index, box.checked);
+    });
+  });
+</script>
+
 </body>
 </html>
