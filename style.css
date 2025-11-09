@@ -1,80 +1,97 @@
+/* Fonts */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #fff8f9;
-  color: #444;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf9f8;
+  color: #444;
   text-align: center;
 }
 
-header {
-  padding: 2rem 1rem;
-  background: linear-gradient(135deg, #ffe6ec, #fffaf3);
-  border-bottom: 2px solid #ffd6dc;
-}
-
 h1 {
-  color: #d47fa6;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: #b8627f;
+  margin: 0.5rem 0;
 }
 
-p {
-  color: #555;
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #9a4f6d;
+  font-size: 1.8rem;
 }
 
-.zoe-photo {
-  width: 160px;
-  height: 160px;
+.site-header {
+  padding: 3rem 1rem 1rem;
+  background: #fffafc;
+}
+
+.portrait {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin-top: 1rem;
-  border: 4px solid #f7c7d3;
+  border: 4px solid #f5d7e2;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.link-section {
+.intro {
+  font-size: 1rem;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  color: #666;
+}
+
+.cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 0 1rem 3rem;
 }
 
-.link-card {
-  background: #fff;
-  border: 2px solid #ffd6dc;
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #f5d7e2;
   border-radius: 12px;
-  padding: 1rem 2rem;
-  margin: 1rem;
-  width: 80%;
-  max-width: 350px;
+  padding: 2rem;
   text-decoration: none;
-  color: #d47fa6;
-  transition: 0.2s ease;
+  color: inherit;
+  width: 90%;
+  max-width: 320px;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.link-card:hover {
-  background: #ffeef2;
-  transform: translateY(-4px);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-.wishlist {
-  list-style: none;
-  padding: 0;
-  margin: 2rem auto;
-  max-width: 400px;
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #b8627f;
+  border-radius: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s;
 }
 
-.wishlist li {
-  background: #fff;
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border-radius: 10px;
-  border: 1px solid #ffd6dc;
+.btn:hover {
+  background-color: #9b4d66;
 }
 
-footer {
-  margin: 2rem 0;
+.site-footer {
+  padding: 2rem 1rem;
   color: #aaa;
-}
-
-footer a {
-  text-decoration: none;
-  color: #d47fa6;
+  font-size: 0.9rem;
 }
